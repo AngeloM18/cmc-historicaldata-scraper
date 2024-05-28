@@ -10,7 +10,7 @@ The dates follow the format %Y%m%d — for instance: 20240202.
 ```
 --start — Enter the start date to start scraping from (20160101, by default).
 --end — Enter the end date to scrape up to (today's date, by default).
---freq — Enter the frequency of the data (7 [weekly], by default).
+--freq — Enter the daily frequency of the data (7 [weekly], by default).
 --out — Enter the name of the output .xlsx file (scraped_data.xlsx, by default).
 ```
 ### EXAMPLE
