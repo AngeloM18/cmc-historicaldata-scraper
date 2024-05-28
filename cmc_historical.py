@@ -56,6 +56,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--start', type=parse_date, default=dt(2016, 1, 1))
     parser.add_argument('--end', type=parse_date, default=dt.today())
+    parser.add_argument('--freq', type=int, default=7)
     parser.add_argument('--out', default='scraped_data.xlsx')
     arg = parser.parse_args()
 
@@ -64,11 +65,12 @@ def main():
     
     while date <= arg.end:
         data.update(scrape(date))
-        date += td(7)
+        date += td(arg.freq)
         time.sleep(1)
 
     df = pd.DataFrame(data).T
     df.columns.set_names("Date", level=0, inplace=True)
+    print(df)
     df.to_excel(arg.out, freeze_panes=(1, 1))
 
 if __name__ == '__main__':
