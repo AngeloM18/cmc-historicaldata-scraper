@@ -51,4 +51,4 @@ pip install pandas argparse selenium xlrd openpyxl
 ## DATA EXAMPLE
 ![marketdata](https://github.com/AngeloM18/cmc-historicaldata-scraper/assets/123282394/547910cc-6e2b-4f22-8211-26b76313e376)
 
-Since this script only scrapes the data from the top 200 table, those that have empty cells mean they fell from that rank.
+Since this script only scrapes the data from the top 200 table, any empty cell means the coin fell from the top 200 rank for that period.
