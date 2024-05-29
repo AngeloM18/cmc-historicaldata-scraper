@@ -70,7 +70,6 @@ def main():
 
     df = pd.DataFrame(data).T
     df.columns.set_names("Date", level=0, inplace=True)
-    print(df)
     df.to_excel(arg.out, freeze_panes=(1, 1))
 
 if __name__ == '__main__':
