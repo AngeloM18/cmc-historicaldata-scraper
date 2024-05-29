@@ -27,7 +27,7 @@ def scrape(date):
             for (let index of trElements.keys()) {
               	const tdElements = Array.from(trElements[index].querySelectorAll('td'));
                 // coin name (ticker)
-				const coinName = `${tdElements[1].querySelector('div > a:nth-of-type(2)').textContent} (${tdElements[2].textContent})`;
+		const coinName = `${tdElements[1].querySelector('div > a:nth-of-type(2)').textContent} (${tdElements[2].textContent})`;
                 const headers = [...tableHeaders];
                 // mcap up to price
                 const sliced = tdElements.slice(3, 5);
